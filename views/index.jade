@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  #page-content-wrapper
+    .page-content.inset
+      .row
+        a#menu-toggle.btn.btn-default(href='#')
+          i.fa.fa-bars
+        .col-md-12
+          h1 Social Media using Node-express and passport.
+          p. Facebook and Twitter login with express and passport.
+          a(href="/") Go home
+          br
+          a(href="/auth/facebook") Login via facebook
+          br
+          a(href="/auth/twitter") Login via Twitter
+
+  script
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("active");
+    });
